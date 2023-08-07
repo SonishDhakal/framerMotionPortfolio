@@ -4,14 +4,23 @@ import Circles from "../../components/Circles";
 import {BsArrowRight} from 'react-icons/bs'
 
 
+import { fadeIn } from "../../variants";
+
 
 
 const Contact = () => {
   return <div className="h-full bg-primary/30 ">
-    <div className="container max-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+    <div className=" mx-auto container max-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
 
 
-      <div className=" flex flex-col w-full max-w-[700px]"
+      <motion.div
+      
+      variants={fadeIn('down', 0.5)}
+      initial='hidden'
+      animate='show'
+      exit='hidden'
+      transition={{duration:1,ease:'easeInOut'}}
+      className=" flex flex-col w-full max-w-[700px]"
      >
         {/* text
         
@@ -43,7 +52,7 @@ const Contact = () => {
             <BsArrowRight />
             </button>
       </form>
-      </div>
+      </motion.div>
     </div>
 
   </div>

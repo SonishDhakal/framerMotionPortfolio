@@ -32,17 +32,20 @@ const serviceData = [
 
 // swiper compoentrs
 
-import { FreeMode,Pagination } from 'swiper';
+import { FreeMode,Pagination } from 'swiper/modules';
 
 import {Swiper,SwiperSlide} from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/free-mode'
-import 'swiper/css/pagination'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
 
 const ServiceSlider = () => {
-  return <Swiper breakpoints={{
+  return <Swiper
+  modules={[FreeMode,Pagination]}
+   breakpoints={{
     320:{
       slidesPerView:1,
       spaceBetween:15,
@@ -56,10 +59,10 @@ const ServiceSlider = () => {
   }}
   
   freeMode={true}
-  pagination={true}
+  pagination={{ clickable: true }}
   
-  modules={{FreeMode,Pagination}}
-  className='h-[240px] sm:h-[340px]'>
+  
+  className=''>
     {
       serviceData.map((item,index) =>{
         return <SwiperSlide key={index}>

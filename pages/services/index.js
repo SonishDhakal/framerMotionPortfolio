@@ -16,17 +16,29 @@ const Services = () => {
 
         {/* text */}
 
-        <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
+        <motion.div
+         variants={fadeIn('up', 0.5)}
+         initial='hidden'
+         animate='show'
+         exit='hidden'
+         transition={{duration:1,ease:'easeInOut'}}
+          className=' text-center flex xl:w-[30vw] flex-col xl:text-left mb-4 xl:mb-0'>
           <h2 className='h2 xl:mt-8'>My Service <span>.</span>
           </h2>
-          <p className="mb-4 max-w-[400px] mx-auto lg:mx-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi deleniti id voluptates. Ipsa voluptatibus fugiat qui aut nemo ex ab.</p>
-          </div>
+          <p className="mb-4 max-w-[400px] mx-auto xl:mx-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi deleniti id voluptates. Ipsa voluptatibus fugiat qui aut nemo ex ab.</p>
+          </motion.div>
 
         {/* slidder */}
 
-       <div className='w-full xl:max-w-[65%]'>
+       <motion.div
+        variants={fadeIn('down', 0.5)}
+        initial='hidden'
+        animate='show'
+        exit='hidden'
+        transition={{duration:1,ease:'easeInOut'}}
+       className='w-full xl:max-w-[65%] '>
        <ServiceSlider />
-       </div>
+       </motion.div>
 
       </div>
 

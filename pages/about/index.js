@@ -101,7 +101,7 @@ const About = () => {
       <Image height={500} width={500} src='/avatar.png' />
     </motion.div>
     <div 
-    className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6"
+    className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 "
     >
       <div className=' flex flex-1 flex-col justify-center'>
         <h2 className='h2'>Captivating <span className='text-accent'>Stories</span> birth magnificant desings</h2>
@@ -166,7 +166,7 @@ const About = () => {
               <div>{item.stage}</div>
              <div className='gap-x-4 flex'>
              {item.icons?.map((icon,iconIndex) => (
-                <div>{icon}</div>
+                <div key={iconIndex}>{icon}</div>
               )) }
              </div>
               </div>
